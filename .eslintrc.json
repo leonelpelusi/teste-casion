@@ -12,6 +12,11 @@
 	},
 	"rules": {
 		"semi": 0,
-		"indent": ["error", 2]
+		"comma-dangle": ["error", "never"],
+		"indent": ["error", 2],
+		"import/prefer-default-export": 0,
+		"no-console": "off",
+		"space-before-function-paren": "off",
+		"no-param-reassign":"off"
 	}
 }

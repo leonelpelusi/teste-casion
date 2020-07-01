@@ -1,6 +1,13 @@
-import routes from './routes'
-import app from './server'
+import 'dotenv/config'
+import { start } from './core/server'
+import { connect } from './core/database'
 
-require('dotenv').config()
-
-app.use(routes)
+(async function app () {
+  try {
+    await connect()
+    await start()
+    console.log(new Date(), 'Server online')
+  } catch (error) {
+    console.error('Failed to start application', error)
+  }
+}())
